@@ -1,0 +1,18 @@
+CRITICAL - 2024-12-14 16:45:53 --> mysqli_sql_exception: Unknown database 'api'
+[Method: GET, Route: /]
+in APPPATH\Models\conexionModel.php on line 23.
+ 1 APPPATH\Models\conexionModel.php(23): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'api')
+ 2 APPPATH\Controllers\conexionController.php(12): conexionModel->conectar()
+ 3 APPPATH\Models\consultaModel.php(13): conexionController->conectarBd()
+ 4 APPPATH\Controllers\consultaController.php(9): consultaModel->consulta()
+ 5 APPPATH\Views\welcome_message.php(12): consultaController->consultaApi()
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\api\\api\\app\\Views\\welcome_message.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 9 APPPATH\Controllers\Home.php(9): view('welcome_message')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
